@@ -7,7 +7,7 @@ class Shell
     # And avoid test failures due to non English Locale
     puts "ssh: #{cmd}"
     self.do \
-      "ssh root@#{server}  -o 'UserKnownHostsFile /dev/null' -o StrictHostKeyChecking=no -p #{port} \"#{cmd}\"",
+      "ssh root@#{server}  #{self.ssh_options} -p #{port} \"#{cmd}\"",
       expected_exit_status
   end
 
@@ -18,7 +18,7 @@ class Shell
 
   def self.scp source, server, port, dest
     puts "scp: #{source} root@#{server}:#{dest}"
-    self.do "scp -r -P #{port} #{source} root@#{server}:#{dest}", 0
+    self.do "scp #{self.ssh_options} -r -P #{port} #{source} root@#{server}:#{dest}", 0
   end
 
 private
@@ -38,6 +38,10 @@ private
       ]
     end
     stdout
+  end
+
+  def self.ssh_options
+    "-o 'UserKnownHostsFile /dev/null' -o StrictHostKeyChecking=no"
   end
 
 end
