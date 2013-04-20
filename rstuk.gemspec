@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Common library for kiwi_spec and studio_spec}
   s.description = %q{Common library for kiwi_spec and studio_spec}
   s.authors     = ["Yury Tsarev", "Theo Chatzimichos"]
-  s.email       = ["ytsarev@suse.com"]
+  s.email       = ["ytsarev@suse.com", "tchatzimichos@suse.com"]
 
   s.rubyforge_project = "rstuk"
 
