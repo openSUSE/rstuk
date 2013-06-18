@@ -2,8 +2,8 @@
 
 Gem::Specification.new do |s|
   s.name        = "rstuk"
-  s.version     = "0.0.1"
-  s.date        = "2013-04-10"
+  s.version     = "0.0.2"
+  s.date        = "2013-06-18"
   s.summary     = %q{Common library for kiwi_spec and studio_spec}
   s.description = %q{Common library for kiwi_spec and studio_spec}
   s.authors     = ["Yury Tsarev", "Theo Chatzimichos"]
